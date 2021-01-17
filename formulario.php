@@ -227,20 +227,19 @@
                     });
                 </script>
                 <!-- Formulario de registro -->
-    <?
-session_start();
+                <? session_start();
  
-function loginForm(){
-    echo'<div id="loginform">';
-    echo'<form action="index.php" method="post">';
-    echo'    <label for="name">Name:</label>';
-    echo'    <input type="text" name="name" id="name" />';
-    echo'    <input type="submit" name="enter" id="enter" value="Enter" />';
-    echo'</form>';
-    echo'</div>';
-    
-}
-?>
+             function loginForm(){
+                 echo "<div id='loginform'>";
+                 echo "<form action='index.php' method='post'>";
+                 echo "    <label for='name'>Name:</label>";
+                 echo "    <input type='text' name='name' id='name' />";
+                 echo "    <input type='submit' name='enter' id='enter' value='Enter' />";
+                 echo "</form>";
+                 echo "</div>";
+     
+ }
+ ?>
             </div>
         </div>
     </div>
