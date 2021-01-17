@@ -37,9 +37,9 @@
             color: white;
             padding: 15px;
             text-align: left;
-            position: absolute;
-            left: 0px;
-            right: 0px;
+            position: fixed;
+            width:100%;
+            bottom: 0;
         }
         
         footer div {
@@ -54,6 +54,13 @@
         
         #idA {
             color: white;
+        }
+
+        .WHO {
+          padding: 15px;
+          font-style: italic;
+          font-weight: bold;
+          position: sticky;
         }
         /* On small screens, set height to 'auto' for sidenav and grid */
         
@@ -95,24 +102,19 @@
             animation-duration: 4s;
             position: relative;
             animation-iteration-count: infinite;
-            display: inline-block;
         }
-        div.muela {
-            display: inline-block;
-        }
+       
         div.animasio 
         {
           text-align: center;
+          display: inline-block;
         }
+      
+
 
        /* SASS */
         
-        .WHO {
-          padding: 15px;
-          font-style: italic;
-          font-weight: bold;
-        }
-
+        
     </style>
 </head>
 
@@ -205,7 +207,7 @@
         <h2>¿QUIÉNES SOMOS?</h2>
         <table style="width:100%">
               <tr>
-                <td>Somos una nueva clínica dental que ha reunido a varios expertos de la provincia</td>
+                <td>Contamos con expertos de toda la provincia</td>
                 <td>Nuestras instalaciones están equipadas con la última tecnología</td>
                 <td>Más de 20 expertos trabajando codo con codo</td>
                 <td>Tenemos equipos de protección contra el CoVid-19</td>
