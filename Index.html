@@ -28,7 +28,10 @@
             height: 100%;
         }
         /* Set black background color, white text and some padding */
-        
+        .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+          background-color: #1C73D8;
+        }
+
         footer {
             background-color: #4CE5D7;
             color: white;
@@ -65,33 +68,41 @@
         }
         
         #idA:hover {
-            color: #3474B0;
+            color:#E7A0DC;
         }
 
         /* Animación */
 
         @keyframes example {
             0% {
-                left: 0px;
+                left: -50px;
                 top: 0px;
             }
             50% {
-                left: 200px;
+                left: 50px;
                 top: 0px;
             }
             100% {
-                left: 0px;
+                left: -50px;
                 top: 0px;
             }
         }
 
         div.cepillo {
-            width: 125px;
-            height: 125px;
+            width: 50px;
+            height: 50px;
             animation-name: example;
             animation-duration: 4s;
             position: relative;
             animation-iteration-count: infinite;
+            display: inline-block;
+        }
+        div.muela {
+            display: inline-block;
+        }
+        div.animasio 
+        {
+          text-align: center;
         }
 
        /* SASS */
@@ -132,7 +143,7 @@
 
     <div class="container-fluid">
         <div class="row content">
-            <div class="col-sm-2 sidenav">
+            <div class="col-sm-2 sidenav text-center">
               <a class="twitter-timeline" data-lang="es" data-width="300" data-height="400" href="https://twitter.com/Vitaldent_es?ref_src=twsrc%5Etfw">Tweets de otros expertos</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
             <div class="col-sm-8 text-left">
@@ -180,25 +191,27 @@
                 
          
           </div>
-          <div class="col-sm-2 sidenav">
+          <div class="col-sm-2 sidenav text-center">
             <a class="twitter-timeline" data-lang="es" data-width="300" data-height="400" data-theme="light" href="https://twitter.com/C57Double?ref_src=twsrc%5Etfw">Tweets del desarrollador</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-            <a href="https://twitter.com/C57Double?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-lang="es" data-show-count="false">Follow @C57Double</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-            <div class="cepillo"><img src="unnamed.png" alt="cepillo" height="250" width="250"></div>
-            <div><img src="diente.jpg" alt="diente" height="250" width="250"></div>
+            <div><a href="https://twitter.com/C57Double?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-lang="es" data-show-count="false">Follow @C57Double</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+            <div class="animasio">
+            <div class="cepillo"><img src="img/unnamed.png" alt="cepillo" height="100" width="100"></div>
+            <div><img src="img/diente.jpg" alt="diente" height="100" width="100"></div>
+          </div>
           </div>
         </div>
       </div>
-        <div class="WHO text-center">
-          <h2>¿QUIÉNES SOMOS?</h2>
-          <table style="width:100%">
-                <tr>
-                  <td>Somos una nueva clínica dental que ha reunido a varios expertos de la provincia</td>
-                  <td>Nuestras instalaciones están equipadas con la última tecnología</td>
-                  <td>Más de 20 expertos trabajando codo con codo</td>
-                  <td>Tenemos equipos de protección contra el CoVid-19</td>
-                </tr>
-          </table>
-        </div>
+      <div class="WHO text-center">
+        <h2>¿QUIÉNES SOMOS?</h2>
+        <table style="width:100%">
+              <tr>
+                <td>Somos una nueva clínica dental que ha reunido a varios expertos de la provincia</td>
+                <td>Nuestras instalaciones están equipadas con la última tecnología</td>
+                <td>Más de 20 expertos trabajando codo con codo</td>
+                <td>Tenemos equipos de protección contra el CoVid-19</td>
+              </tr>
+        </table>
+      </div>
         <footer class="container-fluid text-center">
             <div>
                 José Antonio Pérez Tinajero & Jesús Rosado Pereira. J&J Dental.
