@@ -28,16 +28,19 @@
             height: 100%;
         }
         /* Set black background color, white text and some padding */
-        .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
-          background-color: #1C73D8;
+        
+        .navbar-inverse .navbar-nav>.active>a,
+        .navbar-inverse .navbar-nav>.active>a:focus,
+        .navbar-inverse .navbar-nav>.active>a:hover {
+            background-color: #1C73D8;
         }
-
+        
         .footer {
             background-color: #4CE5D7;
             color: white;
             padding: 15px;
             text-align: left;
-            width:100%;
+            width: 100%;
             position: sticky;
             display: block;
         }
@@ -51,18 +54,17 @@
         #idA {
             color: white;
         }
-
-        .WHO {
-          padding: 15px;
-          font-style: italic;
-          font-weight: bold;
-          position: sticky;
-        } 
         
-        td {
-          height: 3em;
+        .WHO {
+            padding: 15px;
+            font-style: italic;
+            font-weight: bold;
+            position: sticky;
         }
         
+        td {
+            height: 3em;
+        }
         /* On small screens, set height to 'auto' for sidenav and grid */
         
         @media screen and (max-width: 767px) {
@@ -76,11 +78,10 @@
         }
         
         #idA:hover {
-            color:#E7A0DC;
+            color: #E7A0DC;
         }
-
         /* Animación */
-
+        
         @keyframes example {
             0% {
                 left: -50px;
@@ -95,7 +96,7 @@
                 top: 0px;
             }
         }
-
+        
         div.cepillo {
             width: 50px;
             height: 50px;
@@ -104,18 +105,12 @@
             position: relative;
             animation-iteration-count: infinite;
         }
-       
-        div.animasio 
-        {
-          text-align: center;
-          display: inline-block;
+        
+        div.animasio {
+            text-align: center;
+            display: inline-block;
         }
-      
-
-
-       /* SASS */
-        
-        
+        /* SASS */
     </style>
 </head>
 
@@ -146,7 +141,8 @@
     <div class="container-fluid">
         <div class="row content">
             <div class="col-sm-2 sidenav text-center">
-              <a class="twitter-timeline" data-lang="es" data-width="300" data-height="400" href="https://twitter.com/Vitaldent_es?ref_src=twsrc%5Etfw">Tweets de otros expertos</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <a class="twitter-timeline" data-lang="es" data-width="300" data-height="400" href="https://twitter.com/Vitaldent_es?ref_src=twsrc%5Etfw">Tweets de otros expertos</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
             <div class="col-sm-8 text-left">
                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -162,21 +158,21 @@
                     <!-- Slides -->
                     <div class="carousel-inner">
                         <div class="item active">
-                            <img src="img/Denti1.jpg" alt="1" width="1280px" height="720px">
+                            <img src="img/Denti1.jpg" alt="1" width="100%" height="100%">
                         </div>
 
                         <div class="item">
-                            <img src="img/Denti2.jpg" alt="2" width="1280px" height="720px">
+                            <img src="img/Denti2.jpg" alt="2" width="100%" height="100%">
                         </div>
 
                         <div class="item">
-                            <img src="img/Denti3.jpg" alt="3" width="1280px" height="720px">
+                            <img src="img/Denti3.jpg" alt="3" width="100%" height="100%">
                         </div>
                         <div class="item">
-                            <img src="img/Denti4.jpg" alt="4" width="1280px" height="720px">
+                            <img src="img/Denti4.jpg" alt="4" width="100%" height="100%">
                         </div>
                         <div class="item">
-                            <img src="img/Dentifinal.jpg" alt="Final" width="1280px" height="720px">
+                            <img src="img/Dentifinal.jpg" alt="Final" width="100%" height="100%">
                         </div>
                     </div>
 
@@ -190,41 +186,44 @@
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
-                
-         
-          </div>
-          <div class="col-sm-2 sidenav container-fluid text-center">
-            <a class="twitter-timeline" data-lang="es" data-width="300" data-height="400" data-theme="light" href="https://twitter.com/C57Double?ref_src=twsrc%5Etfw">Tweets del desarrollador</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-            <div><a href="https://twitter.com/C57Double?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-lang="es" data-show-count="false">Follow @C57Double</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
-          <div class="animasio">
-            <div class="cepillo"><img src="img/unnamed.png" alt="cepillo" height="100" width="100"></div>
-            <div><img src="img/diente.jpg" alt="diente" height="100" width="100"></div>
-          </div>
-          </div>
+
+
+            </div>
+            <div class="col-sm-2 sidenav container-fluid text-center">
+                <a class="twitter-timeline" data-lang="es" data-width="300" data-height="400" data-theme="light" href="https://twitter.com/C57Double?ref_src=twsrc%5Etfw">Tweets del desarrollador</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <div><a href="https://twitter.com/C57Double?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-lang="es" data-show-count="false">Follow @C57Double</a>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+                <div class="animasio">
+                    <div class="cepillo"><img src="img/unnamed.png" alt="cepillo" height="100" width="100"></div>
+                    <div><img src="img/diente.jpg" alt="diente" height="100" width="100"></div>
+                </div>
+            </div>
         </div>
-      </div>
+    </div>
 
-      <div>
+    <div>
         <br>
         <br>
-      </div>
+    </div>
 
-      <div class="WHO text-center">
+    <div class="WHO text-center">
         <h2>¿QUIÉNES SOMOS?</h2>
         <table style="width:100%">
-              <tr>
+            <tr>
                 <td>Contamos con expertos de toda la provincia</td>
                 <td>Nuestras instalaciones están equipadas con la última tecnología</td>
                 <td>Más de 20 expertos trabajando codo con codo</td>
                 <td>Tenemos equipos de protección contra el CoVid-19</td>
-              </tr>
+            </tr>
         </table>
-      </div>
-      <div class="footer container-fluid text-center">
-          <span style="float:left">José Antonio Pérez Tinajero & Jesús Rosado Pereira. J&J Dental.</span>
-          <span style="float:right">11408. Número de contacto: 611415763 / 651475634</span> 
-      </div>
-  
+    </div>
+    <div class="footer container-fluid text-center">
+        <span style="float:left">José Antonio Pérez Tinajero & Jesús Rosado Pereira. J&J Dental.</span>
+        <span style="float:right">11408. Número de contacto: 611415763 / 651475634</span>
+    </div>
+
 </body>
 
 </html>
