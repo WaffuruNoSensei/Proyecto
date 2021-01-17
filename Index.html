@@ -34,9 +34,8 @@
             color: white;
             padding: 15px;
             text-align: left;
-            position: fixed;
+            position: absolute;
             left: 0px;
-            bottom: 0px;
             right: 0px;
         }
         
@@ -68,8 +67,40 @@
         #idA:hover {
             color: #3474B0;
         }
+
+        /* Animación */
+
+        @keyframes example {
+            0% {
+                left: 0px;
+                top: 0px;
+            }
+            50% {
+                left: 200px;
+                top: 0px;
+            }
+            100% {
+                left: 0px;
+                top: 0px;
+            }
+        }
+
+        div.cepillo {
+            width: 125px;
+            height: 125px;
+            animation-name: example;
+            animation-duration: 4s;
+            position: relative;
+            animation-iteration-count: infinite;
+        }
+
        /* SASS */
-       
+        
+        .WHO {
+          padding: 15px;
+          font-style: italic;
+          font-weight: bold;
+        }
 
     </style>
 </head>
@@ -152,18 +183,21 @@
           <div class="col-sm-2 sidenav">
             <a class="twitter-timeline" data-lang="es" data-width="300" data-height="400" data-theme="light" href="https://twitter.com/C57Double?ref_src=twsrc%5Etfw">Tweets del desarrollador</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             <a href="https://twitter.com/C57Double?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-lang="es" data-show-count="false">Follow @C57Double</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <div class="cepillo"><img src="unnamed.png" alt="cepillo" height="250" width="250"></div>
+            <div><img src="diente.jpg" alt="diente" height="250" width="250"></div>
           </div>
         </div>
       </div>
-  
-        <div class="WHO">
-          <h2>¿QUIENES SOMOS?</h1>
-          <ul>
-            <li>Somos una nueva clínica dental que ha reunido a varios expertos de la provincia</li>
-            <li>Nuestras instalaciones están equipadas con la última tecnología</li>
-            <li>Más de 20 expertos trabajando codo con codo</li>
-            <li>Tenemos equipos de protección contra el CoVid-19</li>
-        </ul>
+        <div class="WHO text-center">
+          <h2>¿QUIÉNES SOMOS?</h2>
+          <table style="width:100%">
+                <tr>
+                  <td>Somos una nueva clínica dental que ha reunido a varios expertos de la provincia</td>
+                  <td>Nuestras instalaciones están equipadas con la última tecnología</td>
+                  <td>Más de 20 expertos trabajando codo con codo</td>
+                  <td>Tenemos equipos de protección contra el CoVid-19</td>
+                </tr>
+          </table>
         </div>
         <footer class="container-fluid text-center">
             <div>
