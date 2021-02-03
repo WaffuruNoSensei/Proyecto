@@ -160,8 +160,6 @@
     @media screen and (max-width: 767px) {
         .grid-container {
             padding: 0%;
-        }
-        .grid-item {
-            font-size: 25%;
+            font-size: 30%;
         }
     }
