@@ -157,6 +157,12 @@
         padding-left: 10%;
     }
     
+    .grid-fotos {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        padding-left: 15%;
+    }
+    
     @media screen and (max-width: 767px) {
         .grid-container {
             padding: 0%;
