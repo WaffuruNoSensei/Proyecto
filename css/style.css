@@ -147,7 +147,7 @@
     .grid-item {
         background-color: rgba(94, 217, 255, 0.288);
         border: 5px double rgb(255, 255, 255);
-        padding: 50px;
+        padding: 5%;
         font-size: 20px;
         border-radius: 20px;
     }
