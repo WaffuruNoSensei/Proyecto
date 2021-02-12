@@ -162,6 +162,25 @@
         grid-template-columns: auto auto auto;
         padding-left: 15%;
     }
+    /* Contacto */
+    
+    .grid-container-contacto {
+        display: grid;
+        grid-template-columns: auto auto;
+        background-color: #2195f300;
+        padding: 10px;
+    }
+    
+    .grid-item-contacto {
+        border: 5px double rgb(255, 255, 255);
+        padding: 5%;
+        font-size: 20px;
+        border-radius: 20px;
+    }
+    
+    img .grid-item-contacto {
+        align: center;
+    }
     
     @media screen and (max-width: 767px) {
         .grid-container {
