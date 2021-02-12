@@ -184,12 +184,8 @@
     }
     /* Covid */
     
-    .covid {
-        align: center;
-    }
-    
     .covid div {
-        text-align: justify;
+        text-align: center;
     }
     
     @media screen and (max-width: 767px) {
