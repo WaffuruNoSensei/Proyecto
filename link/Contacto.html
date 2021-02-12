@@ -78,6 +78,100 @@
             </div>
         </div>
     </div>
+    <div align="center" class="formulario">
+        <h2 style="text-align: center;"><b>Contáctanos</b></h2>
+        <form action="" id="formulario">
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombre" required> <br>
+
+            <label for="apellido">Apellido:</label>
+            <input type="text" name="apellido" id="apellido" required> <br>
+
+            <label for="email">Correo electrónico:</label>
+            <input type="email" name="email" id="email" required> <br>
+
+            <label for="Especialista">Con qué profesional le gustaría tener la cita:</label>
+            <select name="Especialista" id="Especialista">
+                <option value="Rekkles Ravenov" default>Rekkles Ravenov</option>
+                <option value="Fernando Pérez">Fernando Pérez</option>
+            </select><br>
+
+            <label for="telefono">Número de Teléfono:</label>
+            <input type="number" name="telefono" id="telefono" minlength="9" maxlength="9" required> <br>
+
+            <label for="servicio">Servicio que requiere:</label>
+            <select name="servicio" id="servicio">
+                <option value="Limpieza Dental" default>Limpieza Dental</option>
+                <option value="Implantología" >Implantología</option>
+                <option value="Protésis Dental">Protésis Dental</option>
+                <option value="Ortodoncia">Ortodoncia</option>
+                <option value="Ortodoncia Invisible" >Ortodoncia Invisible</option>
+                <option value="Carilla Dental" >Carilla Dental</option>
+                <option value="Estética Dental" >Estética Dental</option>
+                <option value="Periodoncia" >Periodoncia</option>
+                <option value="Endodoncia" >Endodoncia</option>
+            </select><br>
+
+            <label for="Tramo">Tramo horario que prefiere:</label>
+            <select name="Tramo" id="Tramo">
+                <option value="Mañana" default>8:00 - 12:00</option>
+                <option value="MedioDia">12:00 - 15:00</option>
+                <option value="Tarde">17:00 - 20:00</option>
+            </select>
+            <br>
+        </form>
+        <button onclick="procesarPedido()">Enviar</button>
+
+        <script>
+            function procesarPedido() {
+                let formulario = {
+                    nombre: document.getElementById('nombre'),
+                    apellido: document.getElementById('apellido'),
+                    Especialista: document.getElementById('Especialista'),
+                    email: document.getElementById('email'),
+                    telefono: document.getElementById('telefono'),
+                    servicio: document.getElementById('servicio'),
+                    Tramo: document.getElementById('Tramo'),
+                }
+
+                let p = formulario.telefono.value;
+                p = p.toString();
+                console.log(p)
+                if (p.length != 9) {
+                    alert('El número de teléfono no es válido, recuerde que solo podemos utilizar números con el formato europeo');
+                }
+
+                let tramo = formulario.Tramo.value;
+                console.log(tramo)
+                const minMinutos = 0;
+                const maxMinutos = 59;
+                let horamin = 0
+                let horamax = 1
+                console.log(tramo == 'Mañana')
+                console.log(tramo == 'MedioDia')
+                if (tramo == 'Mañana') {
+                    horamin = 8
+                    horamax = 12
+                } else if (tramo == 'MedioDia') {
+                    horamin = 12
+                    horamax = 15
+                } else {
+                    horamin = 17
+                    horamax = 21
+                }
+
+                let hora = Math.floor(Math.random() * (horamax - horamin)) + horamin;
+                let minutos = Math.floor(Math.random() * (maxMinutos - minMinutos)) + minMinutos;
+                if (minutos < 10) {
+                    minutos = minutos.toString();
+                    minutos = '0' + minutos;
+                }
+                alert('Tu cita ha sido revisada y procesada.');
+                alert('Hola, ' + formulario.nombre.value + ' ' + formulario.apellido.value + ' su cita para ' + formulario.servicio.value + ' ' + ' con el doctor ' + formulario.Especialista.value + ' tendrá lugar el ' + ' x ' + ' a las ' + hora + ':' + minutos);
+            }
+        </script>
+    </div>
+
     <div align="center">
         <h2 style="text-align: center;"><b>Instalaciones</b></h2>
         <img src="../img/plano.png" alt="plano" height="30%" width="30%" align="center">

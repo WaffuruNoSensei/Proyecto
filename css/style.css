@@ -1,201 +1,228 @@
-    /* Remove the navbar's default margin-bottom and rounded borders */
-    
-    .navbar {
-        margin-bottom: 0;
-        border-radius: 0;
-        width: 100%;
-    }
-    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-    
-    .row.content {
-        height: 450px;
-    }
-    /* Set gray background color and 100% height */
-    
+/* Remove the navbar's default margin-bottom and rounded borders */
+
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+    width: 100%;
+}
+
+
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+
+.row.content {
+    height: 450px;
+}
+
+
+/* Set gray background color and 100% height */
+
+.sidenav {
+    padding-top: 20px;
+    background-color: #f1f1f1;
+    height: 100%;
+}
+
+
+/* Set black background color, white text and some padding */
+
+.navbar-inverse .navbar-nav>.active>a,
+.navbar-inverse .navbar-nav>.active>a:focus,
+.navbar-inverse .navbar-nav>.active>a:hover {
+    background-color: #1C73D8;
+}
+
+.footer {
+    background-color: #4CE5D7;
+    color: white;
+    padding: 15px;
+    text-align: left;
+    width: 100%;
+    position: sticky;
+    display: block;
+}
+
+.pie1 {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.pie2 {
+    position: block;
+    bottom: 0;
+    width: 100%;
+}
+
+#header {
+    border: none;
+    background-color: #4CE5D7;
+    color: white;
+}
+
+#idA {
+    color: white;
+}
+
+.WHO {
+    padding: 15px;
+    font-style: italic;
+    font-weight: bold;
+    position: sticky;
+}
+
+td {
+    height: 3em;
+}
+
+#idA:hover {
+    color: #E7A0DC;
+}
+
+.turboabajo {
+    display: block;
+}
+
+.carousel {
+    position: relative;
+    display: block;
+}
+
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+
+@media screen and (max-width: 767px) {
     .sidenav {
-        padding-top: 20px;
-        background-color: #f1f1f1;
-        height: 100%;
-    }
-    /* Set black background color, white text and some padding */
-    
-    .navbar-inverse .navbar-nav>.active>a,
-    .navbar-inverse .navbar-nav>.active>a:focus,
-    .navbar-inverse .navbar-nav>.active>a:hover {
-        background-color: #1C73D8;
-    }
-    
-    .footer {
-        background-color: #4CE5D7;
-        color: white;
+        height: auto;
         padding: 15px;
-        text-align: left;
-        width: 100%;
-        position: sticky;
-        display: block;
     }
-    
-    .pie1 {
-        position: fixed;
-        bottom: 0;
-        width: 100%;
+    .row.content {
+        height: auto;
     }
-    
-    .pie2 {
-        position: block;
-        bottom: 0;
-        width: 100%;
+}
+
+div.WHO {
+    display: block;
+}
+
+div.footer {
+    display: block;
+}
+
+
+/* Animación */
+
+@keyframes example {
+    0% {
+        left: -25px;
+        top: 0px;
     }
-    
-    #header {
-        border: none;
-        background-color: #4CE5D7;
-        color: white;
+    50% {
+        left: 75px;
+        top: 0px;
     }
-    
-    #idA {
-        color: white;
+    100% {
+        left: -25px;
+        top: 0px;
     }
-    
-    .WHO {
-        padding: 15px;
-        font-style: italic;
-        font-weight: bold;
-        position: sticky;
-    }
-    
-    td {
-        height: 3em;
-    }
-    
-    #idA:hover {
-        color: #E7A0DC;
-    }
-    
-    .turboabajo {
-        display: block;
-    }
-    
-    .carousel {
-        position: relative;
-        display: block;
-    }
-    /* On small screens, set height to 'auto' for sidenav and grid */
-    
-    @media screen and (max-width: 767px) {
-        .sidenav {
-            height: auto;
-            padding: 15px;
-        }
-        .row.content {
-            height: auto;
-        }
-    }
-    
-    div.WHO {
-        display: block;
-    }
-    
-    div.footer {
-        display: block;
-    }
-    /* Animación */
-    
-    @keyframes example {
-        0% {
-            left: -25px;
-            top: 0px;
-        }
-        50% {
-            left: 75px;
-            top: 0px;
-        }
-        100% {
-            left: -25px;
-            top: 0px;
-        }
-    }
-    
-    div.cepillo {
-        width: 50px;
-        height: 50px;
-        animation-name: example;
-        animation-duration: 4s;
-        position: relative;
-        animation-iteration-count: infinite;
-    }
-    
-    div.animasio {
-        text-align: center;
-        display: inline-block;
-    }
-    
-    img.animasio {
-        width: 100%;
-        height: 100%;
-    }
-    /* SASS */
-    /* Servicios y tratamiento */
-    
+}
+
+div.cepillo {
+    width: 50px;
+    height: 50px;
+    animation-name: example;
+    animation-duration: 4s;
+    position: relative;
+    animation-iteration-count: infinite;
+}
+
+div.animasio {
+    text-align: center;
+    display: inline-block;
+}
+
+img.animasio {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* SASS */
+
+
+/* Servicios y tratamiento */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #2195f300;
+    padding: 10px;
+}
+
+.grid-item {
+    background-color: rgba(94, 217, 255, 0.288);
+    border: 5px double rgb(255, 255, 255);
+    padding: 5%;
+    font-size: 20px;
+    border-radius: 20px;
+}
+
+.grid-container {
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+.grid-fotos {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding-left: 15%;
+}
+
+
+/* Contacto */
+
+.grid-container-contacto {
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: #2195f300;
+    padding: 10px;
+}
+
+.grid-item-contacto {
+    border: 5px double rgb(255, 255, 255);
+    padding: 5%;
+    font-size: 20px;
+    border-radius: 20px;
+}
+
+.mapa {
+    text-align: "center";
+    padding-top: 5%;
+    padding-bottom: 2%;
+}
+
+.formulario {
+    background-color: rgba(255, 218, 6, 0.116);
+    border: 5px double rgb(255, 255, 255);
+    font-size: 20px;
+    border-radius: 20px;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+
+/* Covid */
+
+.covid div {
+    text-align: center;
+}
+
+@media screen and (max-width: 767px) {
     .grid-container {
-        display: grid;
-        grid-template-columns: auto auto auto;
-        background-color: #2195f300;
-        padding: 10px;
-    }
-    
-    .grid-item {
-        background-color: rgba(94, 217, 255, 0.288);
-        border: 5px double rgb(255, 255, 255);
-        padding: 5%;
-        font-size: 20px;
-        border-radius: 20px;
-    }
-    
-    .grid-container {
-        padding-right: 10%;
-        padding-left: 10%;
-    }
-    
-    .grid-fotos {
-        display: grid;
-        grid-template-columns: auto auto auto;
-        padding-left: 15%;
-    }
-    /* Contacto */
-    
-    .grid-container-contacto {
-        display: grid;
+        padding: 0%;
         grid-template-columns: auto auto;
-        background-color: #2195f300;
-        padding: 10px;
     }
-    
-    .grid-item-contacto {
-        border: 5px double rgb(255, 255, 255);
-        padding: 5%;
-        font-size: 20px;
-        border-radius: 20px;
+    #ultima {
+        padding-right: 10%;
+        grid-column: 1 / 3;
     }
-    
-    .mapa {
-        text-align: "center";
-        padding-top: 5%;
-        padding-bottom: 2%;
-    }
-    /* Covid */
-    
-    .covid div {
-        text-align: center;
-    }
-    
-    @media screen and (max-width: 767px) {
-        .grid-container {
-            padding: 0%;
-            grid-template-columns: auto auto;
-        }
-        #ultima {
-            padding-right: 10%;
-            grid-column: 1 / 3;
-        }
-    }
+}
