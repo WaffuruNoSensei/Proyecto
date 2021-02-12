@@ -178,10 +178,6 @@
         border-radius: 20px;
     }
     
-    img .grid-item-contacto {
-        align: center;
-    }
-    
     @media screen and (max-width: 767px) {
         .grid-container {
             padding: 0%;
