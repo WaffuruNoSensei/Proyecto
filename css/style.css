@@ -178,6 +178,11 @@
         border-radius: 20px;
     }
     
+    .mapa {
+        text-align: "center";
+        padding-top: 5%;
+    }
+    
     @media screen and (max-width: 767px) {
         .grid-container {
             padding: 0%;
