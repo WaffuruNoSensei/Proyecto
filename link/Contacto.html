@@ -166,8 +166,11 @@
                     minutos = minutos.toString();
                     minutos = '0' + minutos;
                 }
+                let diasemana = ['Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes'];
+                let diaaa = Math.floor(Math.random() * (5 - 0)) + 0;
+                console.log(diaaa)
                 alert('Tu cita ha sido revisada y procesada.');
-                alert('Hola, ' + formulario.nombre.value + ' ' + formulario.apellido.value + ' su cita para ' + formulario.servicio.value + ' ' + ' con el doctor ' + formulario.Especialista.value + ' tendrá lugar el ' + ' x ' + ' a las ' + hora + ':' + minutos);
+                alert('Hola, ' + formulario.nombre.value + ' ' + formulario.apellido.value + ' su cita para ' + formulario.servicio.value + ' ' + ' con el doctor ' + formulario.Especialista.value + ' tendrá lugar el ' + diasemana[diaaa] + ' a las ' + hora + ':' + minutos);
             }
         </script>
     </div>
