@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dental Clínica J&J</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse" id="header">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+            </button>
+            </div>
+            <div class="container-fluid" id="myNavbar">
+                <ul class="nav navbar-nav navbar-left">
+                    <li><img src="../img/Logo.png" width="40px" height="40px"></li>
+                </ul>
+                <ul class="nav navbar-nav text-right">
+                    <li><a href="../index.html" id="idA">Home</a></li>
+                    <li class="active"><a href="#" id="idA">Contact</a></li>
+                    <li><a href="Serviciosytratamiento.html" id="idA">Services and Treatments</a></li>
+                    <li><a href="covid.html" id="idA">CoVid-19</a></li>
+                    <li><a href="Presupuesto.html" id="idA">Budget</a></li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <div class="grid-container-contacto">
+        <div class="grid-item-contacto">
+            <div class="card tipo2">
+                <img src="../img/Denti4.jpg" alt="Rekkles" height="100%" width="100%" align="right">
+            </div>
+        </div>
+        <div class="grid-item-contacto">
+            <div class="card tipo2">
+                <h3 style="text-align:left"><b>Rekkles Ravenov</b>
+                </h3>
+                <p>
+                    Our latest addition to the dental staff, our Swedish dentist Rekkles Ravenov with a degree in dentistry brings a more youthful touch to the workforce.
+                </p>
+            </div>
+        </div>
+        <div class="grid-item-contacto">
+            <div class="card tipo2" style="text-align: center;">
+                <h3 style="text-align:right"><b>Miguel Ramírez</b>
+                </h3>
+                <p style="text-align:right">
+                    Our receptionist Miguel Ramírez, takes care of all client consultations and prepares appointments for each of our clients, in addition, his work as a dentist for 15 years also makes him very experienced in the sector so he can give advice to all customers.
+                </p>
+            </div>
+        </div>
+        <div class="grid-item-contacto ">
+            <div class="card tipo2">
+                <img src="../img/Denti2.jpg" alt="Miguelito" height="100%" width="100%">
+            </div>
+        </div>
+        <div class="grid-item-contacto ">
+            <div class="card tipo2">
+                <img src="../img/Denti3.jpg" alt="Fernando" height="100%" width="100%" align="right">
+            </div>
+        </div>
+        <div class="grid-item-contacto ">
+            <div class="card tipo2">
+                <h3 style="text-align:left"><b>Fernando Pérez</b>
+                </h3>
+                <p>
+                    Our most veteran worker on the staff with 40 years in the profession makes him our most trained professional and prepared to teach his colleagues.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div align="center" class="formulario">
+        <h2 style="text-align: center;"><b>Contáctanos</b></h2>
+        <form action="" id="formulario">
+            <label for="nombre">Name:</label>
+            <input type="text" name="nombre" id="nombre" required> <br>
+
+            <label for="apellido">Last Name:</label>
+            <input type="text" name="apellido" id="apellido" required> <br>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required> <br>
+
+            <label for="Especialista">With which professional would you like to have an appointment?:</label>
+            <select name="Especialista" id="Especialista">
+                <option value="Rekkles Ravenov" default>Rekkles Ravenov</option>
+                <option value="Fernando Pérez">Fernando Pérez</option>
+            </select><br>
+
+            <label for="telefono">Tlf:</label>
+            <input type="number" name="telefono" id="telefono" minlength="9" maxlength="9" required> <br>
+
+            <label for="servicio">Service you require:</label>
+            <select name="servicio" id="servicio">
+                <option value="Limpieza Dental" default>Dental cleaning</option>
+                <option value="Implantología" >Implantology</option>
+                <option value="Protesis Dental">Dental Prostheses</option>
+                <option value="Ortodoncia">Orthodontics</option>
+                <option value="Ortodoncia Invisible" >Invisible Orthodontics</option>
+                <option value="Carilla Dental" >Dental Veneer</option>
+                <option value="Estética Dental" >Dental Aesthetics</option>
+                <option value="Periodoncia" >Periodontics</option>
+                <option value="Endodoncia" >Endodontics</option>
+            </select><br>
+
+            <label for="Tramo">Preferred time slot:</label>
+            <select name="Tramo" id="Tramo">
+                <option value="Mañana" default>8:00 - 12:00</option>
+                <option value="MedioDia">12:00 - 15:00</option>
+                <option value="Tarde">17:00 - 20:00</option>
+            </select>
+            <br>
+        </form>
+        <p id="presupuesto"></p>
+        <button onclick="procesarPedido();document.getElementById('presupuesto').innerHTML = Presupuesto()">Enviar</button>
+        <script>
+            function Presupuesto() {
+                let s = formulario.servicio.value;
+                let valor = 0;
+                switch (s) {
+                    case 'Limpieza Dental':
+                        valor = 50;
+                        break;
+                    case 'Implantología':
+                        valor = 1000;
+                        break;
+                    case 'Protesis  Dental':
+                        valor = 250;
+                        break;
+                    case 'Ortodoncia':
+                        valor = 2590;
+                        break;
+                    case 'Ortodoncia Invisible':
+                        valor = 3020;
+                        break;
+                    case 'Carilla Dental':
+                        valor = 250;
+                        break;
+                    case 'Estética Dental':
+                        valor = 300;
+                        break;
+                    case 'Periodoncia':
+                        valor = 72;
+                        break;
+                    case 'Endodoncia':
+                        valor = 125;
+                        break;
+                    default:
+                        valor = 0;
+                }
+                toString(valor);
+                return 'El presupuesto estimado de su tratamiento al que se va a someter asciende a ' + valor + ' € , para más información hable con nuestro experto'
+
+            }
+
+            function procesarPedido() {
+                let formulario = {
+                    nombre: document.getElementById('nombre'),
+                    apellido: document.getElementById('apellido'),
+                    Especialista: document.getElementById('Especialista'),
+                    email: document.getElementById('email'),
+                    telefono: document.getElementById('telefono'),
+                    servicio: document.getElementById('servicio'),
+                    Tramo: document.getElementById('Tramo'),
+                }
+
+                let p = formulario.telefono.value;
+                p = p.toString();
+                console.log(p)
+                if (p.length != 9) {
+                    alert('El número de teléfono no es válido, recuerde que solo podemos utilizar números con el formato europeo');
+                }
+
+                let tramo = formulario.Tramo.value;
+                console.log(tramo)
+                const minMinutos = 0;
+                const maxMinutos = 59;
+                let horamin = 0
+                let horamax = 1
+                console.log(tramo == 'Mañana')
+                console.log(tramo == 'MedioDia')
+                if (tramo == 'Mañana') {
+                    horamin = 8
+                    horamax = 12
+                } else if (tramo == 'MedioDia') {
+                    horamin = 12
+                    horamax = 15
+                } else {
+                    horamin = 17
+                    horamax = 21
+                }
+
+                let hora = Math.floor(Math.random() * (horamax - horamin)) + horamin;
+                let minutos = Math.floor(Math.random() * (maxMinutos - minMinutos)) + minMinutos;
+                if (minutos < 10) {
+                    minutos = minutos.toString();
+                    minutos = '0' + minutos;
+                }
+                let diasemana = ['Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes'];
+                let diaaa = Math.floor(Math.random() * (5 - 0)) + 0;
+                console.log(diaaa)
+                alert('Tu cita ha sido revisada y procesada.');
+                alert('Hola, ' + formulario.nombre.value + ' ' + formulario.apellido.value + ' su cita para ' + formulario.servicio.value + ' ' + ' con el doctor ' + formulario.Especialista.value + ' tendrá lugar el ' + diasemana[diaaa] + ' a las ' + hora + ':' + minutos);
+            }
+        </script>
+    </div>
+
+    <div align="center">
+        <h2 style="text-align: center;"><b>Facilities</b></h2>
+        <img src="../img/plano.png" alt="plano" height="30%" width="30%" align="center">
+    </div>
+    <div class="mapa" align="center">
+        <h2 style="text-align: center;"><b>Location</b></h2>
+        <section class="flex-container justify-space-between row">
+            <section id="central">
+                <div id="escaparate" class="flex-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d799.9068372650861!2d-6.140353170751229!3d36.68345997424478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0dc6972c21e687%3A0x7e7d9c7af6faeab1!2sCalle%20Limones%2C%2011403%20Jerez%20de%20la%20Frontera%2C%20C%C3%A1diz!5e0!3m2!1ses!2ses!4v1613121073134!5m2!1ses!2ses"
+                        width="60%" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+            </section>
+        </section>
+    </div>
+    <footer class="pie2">
+        <div class="footer container-fluid text-center ">
+            <span style="float:left ">José Antonio Pérez Tinajero & Jesús Rosado Pereira. J&J Dental.</span>
+            <span style="float:right ">11408. Contact number: 611415763 / 651475634</span>
+        </div>
+    </footer>
+
+</body>
+
+</html>
