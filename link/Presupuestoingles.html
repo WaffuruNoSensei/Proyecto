@@ -42,7 +42,146 @@
         </div>
     </nav>
     <div class="container text-center">
-        <embed src="../Presupuesto clinica dental.pdf" width="100%" height="936" type="application/pdf">
+        <div align="center" class="preform">
+            <h1><strong>Pide presupuesto a nuestros expertos</strong></h1>
+            <p><strong>Rellena este formulario rápidamente para tener tu presupuesto adecuado al servicio que requieres</strong></p>
+
+        </div>
+        <div align="center" class="formulario">
+            <h2 style="text-align: center;"><b>Contact us</b></h2>
+            <form action="" id="formulario">
+                <label for="nombre">Name:</label>
+                <input type="text" name="nombre" id="nombre" required> <br>
+    
+                <label for="apellido">Last Name:</label>
+                <input type="text" name="apellido" id="apellido" required> <br>
+    
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required> <br>
+    
+                <label for="Especialista">With which professional would you like to have an appointment?:</label>
+                <select name="Especialista" id="Especialista">
+                    <option value="Rekkles Ravenov" default>Rekkles Ravenov</option>
+                    <option value="Fernando Pérez">Fernando Pérez</option>
+                </select><br>
+    
+                <label for="telefono">Tlf:</label>
+                <input type="number" name="telefono" id="telefono" minlength="9" maxlength="9" required> <br>
+    
+                <label for="servicio">Service you require:</label>
+                <select name="servicio" id="servicio">
+                    <option value="Limpieza Dental" default>Dental cleaning</option>
+                    <option value="Implantología" >Implantology</option>
+                    <option value="Protesis Dental">Dental Prostheses</option>
+                    <option value="Ortodoncia">Orthodontics</option>
+                    <option value="Ortodoncia Invisible" >Invisible Orthodontics</option>
+                    <option value="Carilla Dental" >Dental Veneer</option>
+                    <option value="Estética Dental" >Dental Aesthetics</option>
+                    <option value="Periodoncia" >Periodontics</option>
+                    <option value="Endodoncia" >Endodontics</option>
+                </select><br>
+    
+                <label for="Tramo">Preferred time slot:</label>
+                <select name="Tramo" id="Tramo">
+                    <option value="Mañana" default>8:00 - 12:00</option>
+                    <option value="MedioDia">12:00 - 15:00</option>
+                    <option value="Tarde">17:00 - 20:00</option>
+                </select>
+                <br>
+            </form>
+            <p id="presupuesto"></p>
+            <button onclick="procesarPedido();document.getElementById('presupuesto').innerHTML = Presupuesto()">Enviar</button>
+            <script>
+                function Presupuesto() {
+                    let s = formulario.servicio.value;
+                    let valor = 0;
+                    switch (s) {
+                        case 'Limpieza Dental':
+                            valor = 50;
+                            break;
+                        case 'Implantología':
+                            valor = 1000;
+                            break;
+                        case 'Protesis  Dental':
+                            valor = 250;
+                            break;
+                        case 'Ortodoncia':
+                            valor = 2590;
+                            break;
+                        case 'Ortodoncia Invisible':
+                            valor = 3020;
+                            break;
+                        case 'Carilla Dental':
+                            valor = 250;
+                            break;
+                        case 'Estética Dental':
+                            valor = 300;
+                            break;
+                        case 'Periodoncia':
+                            valor = 72;
+                            break;
+                        case 'Endodoncia':
+                            valor = 125;
+                            break;
+                        default:
+                            valor = 0;
+                    }
+                    toString(valor);
+                    return 'El presupuesto estimado de su tratamiento al que se va a someter asciende a ' + valor + ' € , para más información hable con nuestro experto'
+    
+                }
+    
+                function procesarPedido() {
+                    let formulario = {
+                        nombre: document.getElementById('nombre'),
+                        apellido: document.getElementById('apellido'),
+                        Especialista: document.getElementById('Especialista'),
+                        email: document.getElementById('email'),
+                        telefono: document.getElementById('telefono'),
+                        servicio: document.getElementById('servicio'),
+                        Tramo: document.getElementById('Tramo'),
+                    }
+    
+                    let p = formulario.telefono.value;
+                    p = p.toString();
+                    console.log(p)
+                    if (p.length != 9) {
+                        alert('El número de teléfono no es válido, recuerde que solo podemos utilizar números con el formato europeo');
+                    }
+    
+                    let tramo = formulario.Tramo.value;
+                    console.log(tramo)
+                    const minMinutos = 0;
+                    const maxMinutos = 59;
+                    let horamin = 0
+                    let horamax = 1
+                    console.log(tramo == 'Mañana')
+                    console.log(tramo == 'MedioDia')
+                    if (tramo == 'Mañana') {
+                        horamin = 8
+                        horamax = 12
+                    } else if (tramo == 'MedioDia') {
+                        horamin = 12
+                        horamax = 15
+                    } else {
+                        horamin = 17
+                        horamax = 21
+                    }
+    
+                    let hora = Math.floor(Math.random() * (horamax - horamin)) + horamin;
+                    let minutos = Math.floor(Math.random() * (maxMinutos - minMinutos)) + minMinutos;
+                    if (minutos < 10) {
+                        minutos = minutos.toString();
+                        minutos = '0' + minutos;
+                    }
+                    let diasemana = ['Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes'];
+                    let diaaa = Math.floor(Math.random() * (5 - 0)) + 0;
+                    console.log(diaaa)
+                    alert('Tu cita ha sido revisada y procesada.');
+                    alert('Hola, ' + formulario.nombre.value + ' ' + formulario.apellido.value + ' su cita para ' + formulario.servicio.value + ' ' + ' con el doctor ' + formulario.Especialista.value + ' tendrá lugar el ' + diasemana[diaaa] + ' a las ' + hora + ':' + minutos);
+                }
+            </script>
+        </div>
     </div>
     <footer class="pie2">
         <div class="footer container-fluid text-center ">

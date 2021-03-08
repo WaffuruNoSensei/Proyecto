@@ -102,8 +102,12 @@ td {
         width: 100%;
     }
     img.acambiar2 {
-        width: 20%;
+        width: 15%;
     }
+    .grid-container-contacto {
+        grid-template-columns:  auto;
+    }
+    
 }
 
 div.WHO {
@@ -213,13 +217,21 @@ img.animasio {
     border-radius: 20px;
     margin-right: 5%;
     margin-left: 5%;
+    padding-bottom: 5%;
 }
+
+.preform {
+    padding-bottom: 4%;
+}
+
 
 
 /* Covid */
 
 .covid div {
     text-align: center;
+    padding-right: 20%;
+    padding-left: 20%;
 }
 
 @media screen and (max-width: 767px) {
