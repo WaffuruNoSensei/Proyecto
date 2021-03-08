@@ -98,6 +98,12 @@ td {
     .row.content {
         height: auto;
     }
+    img.acambiar {
+        width: 100%;
+    }
+    img.acambiar2 {
+        width: 20%;
+    }
 }
 
 div.WHO {
