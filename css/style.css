@@ -233,6 +233,9 @@ img.animasio {
     .grid-container-contacto {
         grid-template-columns:  auto;
     }
+    img.acambiar3 {
+        width: 70%;
+    }
     
 }
 
