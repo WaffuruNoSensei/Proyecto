@@ -193,7 +193,16 @@ img.animasio {
     padding-bottom: 4%;
 }
 
-
+@media screen and (max-width: 767px) {
+    .grid-container {
+        padding: 0%;
+        grid-template-columns: auto auto;
+    }
+    #ultima {
+        padding-right: 10%;
+        grid-column: 1 / 3;
+    }
+}
 
 /* Covid */
 
